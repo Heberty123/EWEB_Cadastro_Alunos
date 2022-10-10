@@ -1,6 +1,6 @@
 export interface Aluno {
     id: number,
     name: string,
-    ra: number,
+    ra: string,
     cpf: string
 }

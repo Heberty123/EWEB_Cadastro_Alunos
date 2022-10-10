@@ -1,10 +1,31 @@
 <div>
-    <h1>Cadastro de Alunos</h1>
+    <div *ngIf="selectedAluno">
+        <h2>{{selectedAluno.name | uppercase}} Details</h2>
+        <div>id: {{selectedAluno.id}}</div>
+        <div>
+          <label for="aluno-name">Aluno name: </label>
+          <input id="aluno-name" [(ngModel)]="selectedAluno.name" placeholder="name">
+          <label for="aluno-ra">RA: </label>
+          <input id="aluno-ra" [(ngModel)]="selectedAluno.ra" placeholder="ra">
+          <label for="aluno-cpf">CPF: </label>
+          <input id="aluno-cpf" [(ngModel)]="selectedAluno.cpf" placeholder="cpf">
+        </div>
+    </div>
 
 
 
 
     <h2>Lista de Alunos</h2>
+
+
+    <label for="name">Aluno name: </label>
+    <input id="name" [(ngModel)]="alunoNew.name" placeholder="name">
+    <label for="ra">RA: </label>
+    <input id="ra" [(ngModel)]="alunoNew.ra" placeholder="ra">
+    <label for="cpf">CPF: </label>
+    <input id="cpf" [(ngModel)]="alunoNew.cpf" placeholder="cpf">
+    <button type="button" (click)="add()">Salvar</button>
+
 
     <table>
         <tr>
@@ -20,8 +41,8 @@
             <td>{{aluno.name}}</td>
             <td>{{aluno.ra}}</td>
             <td>{{aluno.cpf}}</td>
-            <td><button>Editar</button></td>
-            <td><button>Apagar</button></td>
+            <td><button type="button" (click)="onSelect(aluno)">Editar</button></td>
+            <td><button type="button" (click)="delete(aluno)">Apagar</button></td>
         </tr>
     </table>
 
