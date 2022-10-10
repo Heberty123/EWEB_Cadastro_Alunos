@@ -1,10 +1,28 @@
 <div>
     <h1>Cadastro de Alunos</h1>
 
-    <p>{{aluno.id}}</p>
-    <p>{{aluno.name}}</p>
-    <p>{{aluno.ra}}</p>
-    <p>{{aluno.cpf}}</p>
 
+
+
+    <h2>Lista de Alunos</h2>
+
+    <table>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>ra</td>
+            <td>cpf</td>
+            <td>Editar</td>
+            <td>Apagar</td>
+        </tr>
+        <tr *ngFor="let aluno of alunos">
+            <td>{{aluno.id}}</td>
+            <td>{{aluno.name}}</td>
+            <td>{{aluno.ra}}</td>
+            <td>{{aluno.cpf}}</td>
+            <td><button>Editar</button></td>
+            <td><button>Apagar</button></td>
+        </tr>
+    </table>
 
 </div>
