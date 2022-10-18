@@ -1,4 +1,27 @@
 <div>
+
+
+    <div class="box-edit" *ngIf="selectedAluno">
+        <h2>{{selectedAluno.name | uppercase}} Details</h2>
+        <div>id: {{selectedAluno.id}}</div>
+        <div class="box-edit-aluno">
+            <div>
+                <label for="aluno-name">Aluno name: </label>
+                <input id="aluno-name" [(ngModel)]="selectedAluno.name" placeholder="name">
+            </div>
+            <div>
+                <label for="aluno-ra">RA: </label>
+                <input id="aluno-ra" [(ngModel)]="selectedAluno.ra" placeholder="ra">
+            </div>
+            <div>
+                <label for="aluno-cpf">CPF: </label>
+                <input id="aluno-cpf" [(ngModel)]="selectedAluno.cpf" placeholder="cpf">
+            </div>
+            <button type="button" (click)="salvar()">Salvar</button>
+        </div>
+    </div>
+
+
     <h2 class="title-list">Lista de Alunos</h2>
 
 
@@ -44,23 +67,6 @@
         </tr>
     </table>
 
-    <div class="box-edit" *ngIf="selectedAluno">
-        <h2>{{selectedAluno.name | uppercase}} Details</h2>
-        <div>id: {{selectedAluno.id}}</div>
-        <div class="box-edit-aluno">
-            <div>
-                <label for="aluno-name">Aluno name: </label>
-                <input id="aluno-name" [(ngModel)]="selectedAluno.name" placeholder="name">
-            </div>
-            <div>
-                <label for="aluno-ra">RA: </label>
-                <input id="aluno-ra" [(ngModel)]="selectedAluno.ra" placeholder="ra">
-            </div>
-            <div>
-                <label for="aluno-cpf">CPF: </label>
-                <input id="aluno-cpf" [(ngModel)]="selectedAluno.cpf" placeholder="cpf">
-            </div>
-        </div>
-    </div>
+
 
 </div>

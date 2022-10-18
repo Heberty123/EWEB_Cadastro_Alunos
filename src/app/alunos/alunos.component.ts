@@ -11,7 +11,7 @@ export class AlunosComponent implements OnInit {
 
 
     alunos = Alunos;
-    selectedAluno?: Aluno;
+    selectedAluno?: Aluno | null;
     alunoNew: Aluno = {
         id: 0,
         name: '',
@@ -32,15 +32,31 @@ export class AlunosComponent implements OnInit {
     }
 
     add(): void {
-        let id = this.alunos[this.alunos.length - 1].id + 1;
-        this.alunoNew!.id = id;
-        this.alunos.push(this.alunoNew!);
-        this.alunoNew! = {
-            id: 0,
-            name: '',
-            ra: '',
-            cpf: ''
-        };
+
+        if(this.alunoNew.name != "" && this.alunoNew.ra != "" && this.alunoNew.cpf != ""){
+            if(this.alunos.length == 0){
+                this.alunoNew!.id = 1;
+                this.alunos.push(this.alunoNew!);
+                this.alunoNew! = {
+                    id: 0,
+                    name: '',
+                    ra: '',
+                    cpf: ''
+                };
+            }
+            else{
+                let id = this.alunos[this.alunos.length - 1].id + 1;
+                this.alunoNew!.id = id;
+                this.alunos.push(this.alunoNew!);
+                this.alunoNew! = {
+                    id: 0,
+                    name: '',
+                    ra: '',
+                    cpf: ''
+                };
+            }
+        }
+
     }
 
     delete(aluno: Aluno): void {
@@ -54,6 +70,10 @@ export class AlunosComponent implements OnInit {
             i++;
         })
         
+    }
+
+    salvar(): void{
+        this.selectedAluno = null;
     }
 
 }
