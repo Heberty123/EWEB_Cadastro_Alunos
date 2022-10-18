@@ -7,7 +7,11 @@
 }
 
 .box-edit input{
-    height: 20px;
+    height: 35px;
+    border: 0px rgb(212, 205, 205) solid;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .box-edit-aluno{
@@ -15,7 +19,16 @@
 }
 
 .box-edit-aluno button{
-    height: 30px;
+    margin: 0px auto;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border: 0px white solid;
+    background-color: darkcyan;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .box-edit-aluno div{
@@ -45,7 +58,11 @@
 }
 
 .box-create input{
-    height: 20px;
+    height: 35px;
+    border: 0px rgb(212, 205, 205) solid;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .box-create div{
@@ -53,13 +70,20 @@
     flex-direction: column;
     width: 50%;
     margin: 0px auto;
+    gap: 5px 0px;
 }
 
 .box-create button{
     margin: 0px auto;
     width: 50%;
-    height: 30px;
+    height: 40px;
     text-align: center;
+    border: 0px white solid;
+    background-color: darkcyan;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 
@@ -68,4 +92,24 @@ table{
     border-radius: 4px;
     width: 40%;
     margin: 0px auto;
+    padding: 10px;
+}
+
+.head-table{
+    background-color: cadetblue;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.head-table-for{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.head-table-for button{
+    border: 0px white solid;
+    width: 60%;
+    height: 25px;
+    border-radius: 5px;
 }

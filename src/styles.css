@@ -3,3 +3,7 @@
 .background-main{
     background-color: rgb(236, 228, 216);
 }
+
+button:hover{
+    cursor: pointer;
+}
