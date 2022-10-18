@@ -1,0 +1,67 @@
+
+
+.box-edit{
+    width: 40%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.box-edit input{
+    height: 20px;
+}
+
+.box-edit-aluno{
+    gap: 10px;
+}
+
+.box-edit-aluno div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.box-edit-aluno{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+.title-list{
+    text-align: center;
+}
+
+.box-create{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0px auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.box-create input{
+    height: 20px;
+}
+
+.box-create div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.box-create button{
+    margin: 0px auto;
+    width: 50%;
+    height: 30px;
+    text-align: center;
+}
+
+
+table{
+    background-color: rgb(164, 198, 199);
+    border-radius: 4px;
+    width: 40%;
+    margin: 0px auto;
+}

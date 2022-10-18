@@ -1,30 +1,28 @@
 <div>
-    <div *ngIf="selectedAluno">
-        <h2>{{selectedAluno.name | uppercase}} Details</h2>
-        <div>id: {{selectedAluno.id}}</div>
+    <h2 class="title-list">Lista de Alunos</h2>
+
+
+    
+    <div class="box-create">
         <div>
-          <label for="aluno-name">Aluno name: </label>
-          <input id="aluno-name" [(ngModel)]="selectedAluno.name" placeholder="name">
-          <label for="aluno-ra">RA: </label>
-          <input id="aluno-ra" [(ngModel)]="selectedAluno.ra" placeholder="ra">
-          <label for="aluno-cpf">CPF: </label>
-          <input id="aluno-cpf" [(ngModel)]="selectedAluno.cpf" placeholder="cpf">
+            <label for="name">Aluno name: </label>
+            <input id="name" [(ngModel)]="alunoNew.name" placeholder="name">
         </div>
+
+        <div>
+            <label for="ra">RA: </label>
+            <input id="ra" [(ngModel)]="alunoNew.ra" placeholder="ra">
+        </div>
+
+        <div>
+            <label for="cpf">CPF: </label>
+            <input id="cpf" [(ngModel)]="alunoNew.cpf" placeholder="cpf">
+        </div>
+
+        <button type="button" (click)="add()">Salvar</button>
     </div>
 
 
-
-
-    <h2>Lista de Alunos</h2>
-
-
-    <label for="name">Aluno name: </label>
-    <input id="name" [(ngModel)]="alunoNew.name" placeholder="name">
-    <label for="ra">RA: </label>
-    <input id="ra" [(ngModel)]="alunoNew.ra" placeholder="ra">
-    <label for="cpf">CPF: </label>
-    <input id="cpf" [(ngModel)]="alunoNew.cpf" placeholder="cpf">
-    <button type="button" (click)="add()">Salvar</button>
 
 
     <table>
@@ -45,5 +43,24 @@
             <td><button type="button" (click)="delete(aluno)">Apagar</button></td>
         </tr>
     </table>
+
+    <div class="box-edit" *ngIf="selectedAluno">
+        <h2>{{selectedAluno.name | uppercase}} Details</h2>
+        <div>id: {{selectedAluno.id}}</div>
+        <div class="box-edit-aluno">
+            <div>
+                <label for="aluno-name">Aluno name: </label>
+                <input id="aluno-name" [(ngModel)]="selectedAluno.name" placeholder="name">
+            </div>
+            <div>
+                <label for="aluno-ra">RA: </label>
+                <input id="aluno-ra" [(ngModel)]="selectedAluno.ra" placeholder="ra">
+            </div>
+            <div>
+                <label for="aluno-cpf">CPF: </label>
+                <input id="aluno-cpf" [(ngModel)]="selectedAluno.cpf" placeholder="cpf">
+            </div>
+        </div>
+    </div>
 
 </div>
