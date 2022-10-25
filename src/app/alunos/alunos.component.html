@@ -62,7 +62,7 @@
             <td>{{aluno.name}}</td>
             <td>{{aluno.ra}}</td>
             <td>{{aluno.cpf}}</td>
-            <td><button type="button" (click)="onSelect(aluno)">Editar</button></td>
+            <td><button type="button" [class.button-clicked]="aluno === selectedAluno" (click)="onSelect(aluno)">Editar</button></td>
             <td><button type="button" (click)="delete(aluno)">Apagar</button></td>
         </tr>
     </table>
